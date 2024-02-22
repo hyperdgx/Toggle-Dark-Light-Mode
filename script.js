@@ -1,16 +1,20 @@
 let tuggu = document.getElementById("tuggu");
 let source_parent = document.getElementById("source_parent");
 let moder = document.getElementById("moder")
+const popsound = new Audio("./pop.wav")
+const popsec = new Audio("./popsec.mp3")
 
 function like(){
 
     if(tuggu.innerText == "toggle_on"){
         tuggu.innerText = "toggle_off";
         light();
+        popsound.play();
     }
     else{
         tuggu.innerText = "toggle_on";
         dark();
+        popsec.play();
     }
 }
 
