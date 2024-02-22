@@ -1,0 +1,62 @@
+:root{
+    --primary-color: #111121;
+    --secondary-color: #EFEFEF;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+}
+
+body {
+    background: var(--primary-color);
+    transition: all linear .2s;
+    overflow: hidden;
+}
+
+.tuggu {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.container{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.tuggu {
+    text-decoration: none;
+    z-index: 1;
+    user-select: none;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: all cubic-bezier(0.5, -0.5, 0.2, 5) .2s;
+}
+
+.mode{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 16px;
+    cursor: not-allowed;
+    transition: all cubic-bezier(0.5, -0.5, 0.2, 5) .2s;
+}
+.mode p{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    transition: all cubic-bezier(0.5, -0.5, 0.2, 5) .2s;
+}
