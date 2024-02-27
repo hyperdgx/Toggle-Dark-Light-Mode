@@ -8,12 +8,16 @@
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
     font-weight: 100;
+    user-select: none;
+}
+html, body{
+    overflow: hidden;
 }
 
 body {
     background: var(--primary-color);
     transition: all linear .2s;
-    overflow: hidden;
+    
 }
 
 .tuggu {
@@ -75,4 +79,51 @@ body {
 }
 .logo img{
     width: 32px;
+}
+
+.dlc{
+    font-size: 50vh;
+    color: var(--secondary-color);
+    position: absolute;
+    z-index: -99;
+    opacity: .025;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all linear .2s;
+    cursor: default;
+}
+.noteshow{
+    color: var(--secondary-color);
+    width: fit-content;
+    top: 8vh;
+    position: relative;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    transition: all cubic-bezier(0.5, -0.5, 0.2, 5) .2s;
+    cursor: default;
+    animation: updown infinite .5s cubic-bezier(0.68, -0.25, 0.265, 1) alternate;
+    
+}
+.noteshow::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: inherit;
+    position: absolute;
+    border-radius: 2px;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+@keyframes updown {
+    from{
+        top: 6vh;
+    }
+    to{
+        top: 8vh;
+    }
 }

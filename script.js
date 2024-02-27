@@ -2,6 +2,10 @@ let tuggu = document.getElementById("tuggu");
 let source_parent = document.getElementById("source_parent");
 let moder = document.getElementById("moder")
 let logomode = document.getElementById("logomode");
+let marq = document.getElementById("marq");
+let dl = document.getElementById("dl");
+let ns = document.getElementById("ns");
+let inns = document.getElementById("inns");
 const popsound = new Audio("./pop.wav")
 const popsec = new Audio("./popsec.mp3")
 
@@ -28,6 +32,10 @@ function light(){
     moder.style.background = "var(--primary-color)";
     moder.style.color = "var(--secondary-color)";
     logomode.style.color = "var(--primary-color)";
+    dl.style.color = "var(--primary-color)";
+    dl.innerText = "LIGHT";
+    ns.style.background = "var(--primary-color)";
+    ns.style.color = "var(--secondary-color)";
 }
 function dark(){
     tuggu.style.fontVariationSettings = `'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48`;
@@ -38,4 +46,8 @@ function dark(){
     moder.style.background = "var(--secondary-color)";
     moder.style.color = "var(--primary-color)";
     logomode.style.color = "var(--secondary-color)";
+    dl.style.color = "var(--secondary-color)";
+    dl.innerText = "DARK";
+    ns.style.background = "var(--secondary-color)";
+    ns.style.color = "var(--primary-color)";
 }
